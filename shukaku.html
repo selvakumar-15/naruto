@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Shukaku - One Tail</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+text-align:center;
+color:white;
+background-image:url("11.jpg");
+background-size:cover;
+background-position:center;
+}
+
+.container{
+width:85%;
+margin:auto;
+margin-top:70px;
+background:rgba(0,0,0,0.8);
+padding:40px;
+border-radius:20px;
+}
+
+h1{
+color:orange;
+}
+
+/* image layout */
+.images{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:30px;
+}
+
+.images img{
+width:200px;
+height:200px;
+border-radius:10px;
+object-fit:cover;
+cursor:pointer;
+transition:0.3s;
+}
+
+.images img:hover{
+transform:scale(1.05);
+}
+
+/* center gif */
+.centergif{
+width:120px;
+height:120px;
+}
+
+/* details */
+.details{
+margin-top:20px;
+font-size:18px;
+line-height:1.6;
+}
+
+/* back button */
+.backbtn{
+display:inline-block;
+margin-top:30px;
+padding:12px 25px;
+background:orange;
+color:black;
+font-weight:bold;
+border-radius:10px;
+text-decoration:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Shukaku (One Tail)</h1>
+
+<div class="container">
+
+<div class="images">
+
+<img src="shukaku1.jpg" onclick="showShukaku()">
+
+<img src="a.gif" class="centergif">
+
+<img src="gaara.jpg" onclick="showGaara()">
+
+</div>
+
+<div class="details" id="details">
+
+Click Shukaku or Gaara image to see details.
+
+</div>
+
+<a href="tailedbeasts.html" class="backbtn">⬅ Back to Tailed Beasts</a>
+
+</div>
+
+<script>
+
+function showShukaku(){
+
+document.getElementById("details").innerHTML = `
+<h2>Shukaku</h2>
+<p>Shukaku is the One-Tailed Beast that looks like a giant sand tanuki.</p>
+<p>It has powerful sand and wind abilities.</p>
+<p>Shukaku was sealed inside Gaara of the Hidden Sand Village.</p>
+`;
+
+}
+
+function showGaara(){
+
+document.getElementById("details").innerHTML = `
+<h2>Gaara</h2>
+<p>Gaara is the jinchūriki of the One-Tailed Beast Shukaku.</p>
+<p>Because Shukaku was sealed inside him, Gaara was feared by villagers.</p>
+<p>Later he became the Fifth Kazekage and protected his village.</p>
+`;
+
+}
+
+</script>
+
+</body>
+</html>

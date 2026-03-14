@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Son Goku - Four Tails</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+text-align:center;
+color:white;
+background-image:url("14.jpg");
+background-size:cover;
+background-position:center;
+}
+
+.container{
+width:85%;
+margin:auto;
+margin-top:70px;
+background:rgba(0,0,0,0.8);
+padding:40px;
+border-radius:20px;
+}
+
+h1{
+color:orange;
+}
+
+.images{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:30px;
+}
+
+.images img{
+width:200px;
+height:200px;
+border-radius:10px;
+object-fit:cover;
+cursor:pointer;
+transition:0.3s;
+}
+
+.images img:hover{
+transform:scale(1.05);
+}
+
+.centergif{
+width:120px;
+height:120px;
+cursor:default;
+}
+
+.details{
+margin-top:20px;
+font-size:18px;
+line-height:1.6;
+}
+
+.backbtn{
+display:inline-block;
+margin-top:30px;
+padding:12px 25px;
+background:orange;
+color:black;
+font-weight:bold;
+border-radius:10px;
+text-decoration:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Son Goku (Four Tails)</h1>
+
+<div class="container">
+
+<div class="images">
+
+<img src="songoku1.jpg" onclick="showBeast()">
+
+<img src="d.gif" class="centergif">
+
+<img src="roshi.jpg" onclick="showJin()">
+
+</div>
+
+<div class="details" id="details">
+
+Click Son Goku or Roshi image to see details.
+
+</div>
+
+<a href="tailedbeasts.html" class="backbtn">⬅ Back to Tailed Beasts</a>
+
+</div>
+
+<script>
+
+function showBeast(){
+
+document.getElementById("details").innerHTML = `
+<h2>Son Goku</h2>
+<p>Son Goku is the Four-Tailed Beast.</p>
+<p>He looks like a giant red monkey.</p>
+<p>He has powerful Lava Release abilities.</p>
+`;
+
+}
+
+function showJin(){
+
+document.getElementById("details").innerHTML = `
+<h2>Roshi</h2>
+<p>Roshi was the jinchūriki of the Four-Tailed Beast Son Goku.</p>
+<p>He was a ninja from the Hidden Stone Village.</p>
+<p>Roshi could use Lava Release because of Son Goku's power.</p>
+`;
+
+}
+
+</script>
+
+</body>
+</html>

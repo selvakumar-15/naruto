@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Matatabi - Two Tails</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+text-align:center;
+color:white;
+background-image:url("12.jpg");
+background-size:cover;
+background-position:center;
+}
+
+.container{
+width:85%;
+margin:auto;
+margin-top:70px;
+background:rgba(0,0,0,0.8);
+padding:40px;
+border-radius:20px;
+}
+
+h1{
+color:orange;
+}
+
+.images{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:30px;
+}
+
+.images img{
+width:200px;
+height:200px;
+border-radius:10px;
+object-fit:cover;
+cursor:pointer;
+transition:0.3s;
+}
+
+.images img:hover{
+transform:scale(1.05);
+}
+
+.centergif{
+width:120px;
+height:120px;
+cursor:default;
+}
+
+.details{
+margin-top:20px;
+font-size:18px;
+line-height:1.6;
+}
+
+.backbtn{
+display:inline-block;
+margin-top:30px;
+padding:12px 25px;
+background:orange;
+color:black;
+font-weight:bold;
+border-radius:10px;
+text-decoration:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Matatabi (Two Tails)</h1>
+
+<div class="container">
+
+<div class="images">
+
+<img src="matatabi1.jpg" onclick="showMatatabi()">
+
+<img src="b.gif" class="centergif">
+
+<img src="yugito.jpg" onclick="showYugito()">
+
+</div>
+
+<div class="details" id="details">
+
+Click Matatabi or Yugito image to see details.
+
+</div>
+
+<a href="tailedbeasts.html" class="backbtn">⬅ Back to Tailed Beasts</a>
+
+</div>
+
+<script>
+
+function showMatatabi(){
+
+document.getElementById("details").innerHTML = `
+<h2>Matatabi</h2>
+<p>Matatabi is the Two-Tailed Beast.</p>
+<p>It looks like a giant blue cat covered in flames.</p>
+<p>Matatabi has powerful fire-based abilities.</p>
+<p>It was sealed inside Yugito Nii from the Hidden Cloud Village.</p>
+`;
+
+}
+
+function showYugito(){
+
+document.getElementById("details").innerHTML = `
+<h2>Yugito Nii</h2>
+<p>Yugito Nii is the jinchūriki of the Two-Tailed Beast Matatabi.</p>
+<p>She is a skilled ninja from the Hidden Cloud Village.</p>
+<p>Yugito has strong control over Matatabi's chakra.</p>
+`;
+
+}
+
+</script>
+
+</body>
+</html>

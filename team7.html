@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Team 7</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background-image:url("1.jpg");
+background-size:cover;
+color:white;
+}
+
+h1{
+text-align:center;
+color:orange;
+}
+
+.container{
+display:flex;
+padding:20px;
+}
+
+.menu{
+width:200px;
+}
+
+.box{
+width:150px;
+height:120px;
+border:3px solid orange;
+margin-bottom:20px;
+display:flex;
+justify-content:center;
+align-items:center;
+cursor:pointer;
+font-weight:bold;
+border-radius:10px;
+background:rgba(0,0,0,0.6);
+transition:0.3s;
+}
+
+.box:hover{
+background:orange;
+color:black;
+transform:scale(1.05);
+}
+
+.details{
+flex:1;
+margin-left:40px;
+background:rgba(0,0,0,0.8);
+border-radius:20px;
+padding:30px;
+height:520px;
+overflow-y:auto;
+}
+
+.details img{
+width:250px;
+margin-top:15px;
+border-radius:10px;
+}
+
+video{
+margin-top:15px;
+border-radius:10px;
+}
+
+a{
+color:cyan;
+font-size:18px;
+}
+
+.backbtn{
+display:block;
+width:220px;
+margin:30px auto;
+padding:12px;
+background:orange;
+color:black;
+text-align:center;
+font-weight:bold;
+border-radius:10px;
+text-decoration:none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Team 7</h1>
+
+<div class="container">
+
+<div class="menu">
+
+<div class="box" onclick="showCharacter('kakashi')">Kakashi</div>
+<div class="box" onclick="showCharacter('naruto')">Naruto</div>
+<div class="box" onclick="showCharacter('sasuke')">Sasuke</div>
+<div class="box" onclick="showCharacter('sakura')">Sakura</div>
+
+</div>
+
+<div class="details" id="details">
+
+<h2>Select a character</h2>
+<p>Click Naruto, Sasuke, Sakura or Kakashi.</p>
+
+</div>
+
+</div>
+
+<a href="teams.html" class="backbtn">⬅ Back to Teams Page</a>
+
+<script>
+
+function showCharacter(name){
+
+var content="";
+
+if(name==="naruto"){
+content=`
+
+<h2>Naruto Uzumaki</h2>
+
+<img src="naruto01.jpg">
+
+<audio autoplay>
+<source src="dattebayo.mp3" type="audio/mpeg">
+</audio>
+
+<p><b>Naruto is the main character of Naruto and Naruto Shippuden.</b></p>
+
+<h3>His Dream</h3>
+<p>Naruto wants to become Hokage.</p>
+
+<h3>Powers</h3>
+<p>Shadow Clone Jutsu</p>
+<p>Rasengan</p>
+<p>Sage Mode</p>
+
+<h3>Naruto vs Sasuke</h3>
+
+<a href="https://youtu.be/geP_VYBB2-o" target="_blank">
+Watch Naruto vs Sasuke Fight
+</a>
+
+<br><br>
+
+<video width="350" controls>
+<source src="rase.mp4" type="video/mp4">
+</video>
+
+`;
+}
+
+if(name==="kakashi"){
+content=`
+
+<h2>Kakashi Hatake</h2>
+
+<img src="kakashi.jpg">
+
+<audio autoplay>
+<source src="kakashi.mp3" type="audio/mpeg">
+</audio>
+
+<p><b>Kakashi Hatake is known as the Copy Ninja.</b></p>
+
+<h3>Sharingan</h3>
+<p>Kakashi received the Sharingan from Obito Uchiha.</p>
+
+<h3>Techniques</h3>
+<p>Chidori</p>
+<p>Kamui</p>
+
+<h3>Kakashi Susanoo</h3>
+
+<a href="https://youtu.be/bwLfgWT3PD0" target="_blank">
+Watch Kakashi Susanoo
+</a>
+
+<br><br>
+
+<video width="350" controls>
+<source src="first.mp4" type="video/mp4">
+</video>
+
+`;
+}
+
+if(name==="sasuke"){
+content=`
+
+<h2>Sasuke Uchiha</h2>
+
+<img src="sasuke.jpg">
+
+<audio autoplay>
+<source src="sharingan.mp3" type="audio/mpeg">
+</audio>
+
+<p><b>Sasuke Uchiha is the last surviving member of the Uchiha clan.</b></p>
+
+<h3>Powers</h3>
+<p>Sharingan</p>
+<p>Mangekyo Sharingan</p>
+<p>Rinnegan</p>
+<p>Chidori</p>
+<p>Susanoo</p>
+
+<h3>Sasuke Power</h3>
+
+<a href="https://youtu.be/ouCbRsP5N0I" target="_blank">
+Watch Sasuke Power
+</a>
+
+<br><br>
+
+<video width="350" controls>
+<source src="eye.mp4" type="video/mp4">
+</video>
+
+`;
+}
+
+if(name==="sakura"){
+content=`
+
+<h2>Sakura Haruno</h2>
+
+<img src="sakura.jpg">
+
+<p><b>Sakura Haruno is one of the strongest medical ninjas.</b></p>
+
+<h3>Abilities</h3>
+<p>Medical Ninjutsu</p>
+<p>Super Strength</p>
+<p>Byakugo Seal</p>
+
+<h3>Sakura Healing</h3>
+
+<a href="https://youtu.be/F7Cv10eWnBo" target="_blank">
+Watch Sakura Healing
+</a>
+
+<br><br>
+
+<video width="350" controls>
+<source src="punch.mp4" type="video/mp4">
+</video>
+
+`;
+}
+
+document.getElementById("details").innerHTML=content;
+
+}
+
+</script>
+
+</body>
+</html>

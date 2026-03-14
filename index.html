@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Naruto Hokage Login</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+text-align:center;
+color:white;
+height:100vh;
+
+/* Background image */
+background-image:url("naruto-bg.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+background-attachment:fixed;
+}
+
+/* Login box */
+.login-box{
+margin-top:120px;
+background:rgba(0,0,0,0.6);
+display:inline-block;
+padding:30px;
+border-radius:10px;
+}
+
+.hat{
+width:120px;
+}
+
+h1{
+color:orange;
+}
+
+input{
+width:220px;
+padding:10px;
+margin:10px;
+border:none;
+border-radius:5px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="login-box">
+
+<img class="hat" src="hokagehat.png">
+
+<h1>Hokage</h1>
+
+<input type="text" id="username" placeholder="Enter ID">
+
+<input type="password" id="password" placeholder="Enter Password">
+
+<p>Enter ID and Password</p>
+
+</div>
+
+<script>
+
+document.getElementById("password").addEventListener("input", function(){
+
+var user = document.getElementById("username").value;
+var pass = document.getElementById("password").value;
+
+if(user === "12345" && pass === "12345"){
+
+window.location.href = "naruto.html";
+
+}
+
+});
+
+</script>
+
+</body>
+</html>

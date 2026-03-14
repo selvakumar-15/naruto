@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kokuo - Five Tails</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+text-align:center;
+color:white;
+background-image:url("15.jpg");
+background-size:cover;
+background-position:center;
+}
+
+.container{
+width:85%;
+margin:auto;
+margin-top:70px;
+background:rgba(0,0,0,0.8);
+padding:40px;
+border-radius:20px;
+}
+
+h1{
+color:orange;
+}
+
+.images{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:30px;
+}
+
+.images img{
+width:200px;
+height:200px;
+border-radius:10px;
+object-fit:cover;
+cursor:pointer;
+transition:0.3s;
+}
+
+.images img:hover{
+transform:scale(1.05);
+}
+
+.centergif{
+width:120px;
+height:120px;
+cursor:default;
+}
+
+.details{
+margin-top:20px;
+font-size:18px;
+line-height:1.6;
+}
+
+.backbtn{
+display:inline-block;
+margin-top:30px;
+padding:12px 25px;
+background:orange;
+color:black;
+font-weight:bold;
+border-radius:10px;
+text-decoration:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Kokuo (Five Tails)</h1>
+
+<div class="container">
+
+<div class="images">
+
+<img src="kokuo1.jpeg" onclick="showBeast()">
+
+<img src="e.gif" class="centergif">
+
+<img src="han.jpg" onclick="showJin()">
+
+</div>
+
+<div class="details" id="details">
+
+Click Kokuo or Han image to see details.
+
+</div>
+
+<a href="tailedbeasts.html" class="backbtn">⬅ Back to Tailed Beasts</a>
+
+</div>
+
+<script>
+
+function showBeast(){
+
+document.getElementById("details").innerHTML = `
+<h2>Kokuo</h2>
+<p>Kokuo is the Five-Tailed Beast.</p>
+<p>It looks like a white horse mixed with a dolphin.</p>
+<p>Kokuo possesses powerful steam-based abilities.</p>
+<p>It can increase strength and speed using Boil Release.</p>
+`;
+
+}
+
+function showJin(){
+
+document.getElementById("details").innerHTML = `
+<h2>Han</h2>
+<p>Han was the jinchūriki of the Five-Tailed Beast Kokuo.</p>
+<p>He was a ninja from the Hidden Stone Village.</p>
+<p>Han used steam power to greatly increase his combat strength.</p>
+`;
+
+}
+
+</script>
+
+</body>
+</html>

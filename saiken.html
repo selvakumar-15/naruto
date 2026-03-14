@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Saiken - Six Tails</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+text-align:center;
+color:white;
+background-image:url("16.jpg");
+background-size:cover;
+background-position:center;
+}
+
+.container{
+width:85%;
+margin:auto;
+margin-top:70px;
+background:rgba(0,0,0,0.8);
+padding:40px;
+border-radius:20px;
+}
+
+h1{
+color:orange;
+}
+
+.images{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:30px;
+}
+
+.images img{
+width:200px;
+height:200px;
+border-radius:10px;
+object-fit:cover;
+cursor:pointer;
+transition:0.3s;
+}
+
+.images img:hover{
+transform:scale(1.05);
+}
+
+.centergif{
+width:120px;
+height:120px;
+cursor:default;
+}
+
+.details{
+margin-top:20px;
+font-size:18px;
+line-height:1.6;
+}
+
+.backbtn{
+display:inline-block;
+margin-top:30px;
+padding:12px 25px;
+background:orange;
+color:black;
+font-weight:bold;
+border-radius:10px;
+text-decoration:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Saiken (Six Tails)</h1>
+
+<div class="container">
+
+<div class="images">
+
+<img src="saiken1.jpg" onclick="showBeast()">
+
+<img src="f.gif" class="centergif">
+
+<img src="utakata.jpg" onclick="showJin()">
+
+</div>
+
+<div class="details" id="details">
+
+Click Saiken or Utakata image to see details.
+
+</div>
+
+<a href="tailedbeasts.html" class="backbtn">⬅ Back to Tailed Beasts</a>
+
+</div>
+
+<script>
+
+function showBeast(){
+
+document.getElementById("details").innerHTML = `
+<h2>Saiken</h2>
+<p>Saiken is the Six-Tailed Beast.</p>
+<p>It looks like a giant white slug.</p>
+<p>Saiken uses powerful corrosive bubbles and acid attacks.</p>
+`;
+
+}
+
+function showJin(){
+
+document.getElementById("details").innerHTML = `
+<h2>Utakata</h2>
+<p>Utakata was the jinchūriki of the Six-Tailed Beast Saiken.</p>
+<p>He was a ninja from the Hidden Mist Village.</p>
+<p>Utakata used bubble-based jutsu in combat.</p>
+`;
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Naruto Hokage Website</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+text-align:center;
+color:white;
+height:100vh;
+
+background-image:url("naruto2.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+background-attachment:fixed;
+}
+
+/* Logout button */
+.logout{
+position:absolute;
+top:20px;
+right:20px;
+background:red;
+color:white;
+padding:10px 20px;
+border-radius:6px;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
+
+.logout:hover{
+background:darkred;
+}
+
+h1{
+color:orange;
+margin-top:40px;
+}
+
+.container{
+display:flex;
+justify-content:center;
+gap:40px;
+margin-top:80px;
+}
+
+.box{
+width:220px;
+height:200px;
+background:rgba(0,0,0,0.6);
+border-radius:10px;
+padding:10px;
+transition:0.3s;
+}
+
+.box:hover{
+transform:scale(1.05);
+}
+
+.box img{
+width:100%;
+height:180px;
+border-radius:10px;
+}
+
+a{
+text-decoration:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Logout Button -->
+<a href="index.html" class="logout">Logout</a>
+
+<h1>Welcome Hokage</h1>
+
+<div class="container">
+
+<!-- Box 1 → Teams -->
+<a href="teams.html">
+<div class="box">
+<img src="naruto.jpg">
+</div>
+</a>
+
+<!-- Box 2 → Akatsuki -->
+<a href="akatsuki.html">
+<div class="box">
+<img src="akatsuki.jpg">
+</div>
+</a>
+
+<!-- Box 3 → Tailed Beasts -->
+<a href="tailedbeasts.html">
+<div class="box">
+<img src="beasts.jpg">
+</div>
+</a>
+
+</div>
+
+</body>
+</html>

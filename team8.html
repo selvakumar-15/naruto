@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Team 8</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background-image:url("2.jpg");
+background-size:cover;
+color:white;
+text-align:center;
+}
+
+h1{
+color:orange;
+text-shadow:0 0 10px orange;
+}
+
+.topmenu{
+display:flex;
+justify-content:center;
+gap:25px;
+margin-top:30px;
+}
+
+.box{
+width:150px;
+height:100px;
+border:3px solid orange;
+display:flex;
+justify-content:center;
+align-items:center;
+cursor:pointer;
+font-weight:bold;
+border-radius:10px;
+background:rgba(0,0,0,0.6);
+transition:0.3s;
+}
+
+.box:hover{
+background:orange;
+color:black;
+transform:scale(1.05);
+box-shadow:0 0 15px orange;
+}
+
+.details{
+width:70%;
+margin:40px auto;
+background:rgba(0,0,0,0.8);
+border-radius:20px;
+padding:30px;
+min-height:350px;
+}
+
+.details img{
+width:220px;
+border-radius:10px;
+margin-top:10px;
+}
+
+a{
+color:cyan;
+font-size:18px;
+text-decoration:none;
+}
+
+a:hover{
+color:orange;
+}
+
+.backbtn{
+display:block;
+width:220px;
+margin:30px auto;
+padding:12px;
+background:orange;
+color:black;
+text-align:center;
+font-weight:bold;
+border-radius:10px;
+text-decoration:none;
+}
+
+.backbtn:hover{
+background:red;
+color:white;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Team 8</h1>
+
+<div class="topmenu">
+
+<div class="box" onclick="showCharacter('kurenai')">Kurenai</div>
+<div class="box" onclick="showCharacter('hinata')">Hinata</div>
+<div class="box" onclick="showCharacter('kiba')">Kiba</div>
+<div class="box" onclick="showCharacter('shino')">Shino</div>
+
+</div>
+
+<div class="details" id="details">
+
+<h2>Select a character</h2>
+<p>Click Kurenai, Hinata, Kiba or Shino.</p>
+
+</div>
+
+<a href="teams.html" class="backbtn">⬅ Back to Teams Page</a>
+
+<script>
+
+function showCharacter(name){
+
+var content="";
+
+if(name==="kurenai"){
+content=`
+
+<h2>Kurenai Yuhi</h2>
+
+<img src="kurenai.jpg">
+
+<p><b>Kurenai Yuhi is a Jonin from the Hidden Leaf Village.</b></p>
+
+<h3>Team 8</h3>
+<p>Kurenai is the sensei of Team 8.</p>
+<p>Hinata Hyuga</p>
+<p>Kiba Inuzuka</p>
+<p>Shino Aburame</p>
+
+<h3>Special Ability – Genjutsu</h3>
+<p>Traps enemies in powerful illusions.</p>
+<p>Controls the opponent’s mind and senses.</p>
+<p>Confuses enemies during battle.</p>
+
+<h3>Personal Life</h3>
+<p>Kurenai had a close relationship with Asuma Sarutobi.</p>
+<p>After Asuma dies fighting Hidan, she gives birth to their daughter Mirai Sarutobi.</p>
+
+`;
+}
+
+if(name==="hinata"){
+content=`
+
+<h2>Hinata Hyuga</h2>
+
+<img src="hinata.jpg">
+
+<p><b>Hinata Hyuga is a member of the powerful Hyuga Clan.</b></p>
+
+<h3>Abilities</h3>
+<p>Byakugan eye technique</p>
+<p>Gentle Fist Taijutsu</p>
+
+<h3>Personality</h3>
+<p>Very kind and shy.</p>
+<p>Always admired Naruto Uzumaki and later marries him.</p>
+
+<h3>Hinata Eye Power</h3>
+
+<a href="https://youtu.be/UuN_9GCmhLc" target="_blank">
+Watch Hinata Byakugan Power
+</a>
+
+`;
+}
+
+if(name==="kiba"){
+content=`
+
+<h2>Kiba Inuzuka</h2>
+
+<img src="kiba.jpg">
+
+<p><b>Kiba Inuzuka comes from the Inuzuka Clan.</b></p>
+
+<h3>Abilities</h3>
+<p>Fights together with his dog Akamaru.</p>
+<p>Fang Over Fang spinning attack.</p>
+<p>Very strong sense of smell.</p>
+
+<h3>Personality</h3>
+<p>Loud, confident, and competitive.</p>
+
+<h3>Kiba Fight</h3>
+
+<a href="https://youtu.be/7ycGFic0BxQ" target="_blank">
+Watch Kiba Fight
+</a>
+
+`;
+}
+
+if(name==="shino"){
+content=`
+
+<h2>Shino Aburame</h2>
+
+<img src="shino.jpg">
+
+<p><b>Shino belongs to the Aburame Clan.</b></p>
+
+<h3>Abilities</h3>
+<p>Uses Kikaichu insects inside his body.</p>
+<p>Insects drain enemy chakra.</p>
+<p>Very calm and intelligent fighter.</p>
+
+<h3>Personality</h3>
+<p>Quiet and mysterious.</p>
+<p>Speaks very seriously.</p>
+
+<h3>Training Battle</h3>
+
+<a href="https://youtu.be/l5r9FnM7ugo" target="_blank">
+Watch Shino Training Battle
+</a>
+
+`;
+}
+
+document.getElementById("details").innerHTML=content;
+
+}
+
+</script>
+
+</body>
+</html>

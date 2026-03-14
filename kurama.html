@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kurama - Nine Tails</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+text-align:center;
+color:white;
+background-image:url("19.jpg");
+background-size:cover;
+background-position:center;
+}
+
+.container{
+width:85%;
+margin:auto;
+margin-top:70px;
+background:rgba(0,0,0,0.8);
+padding:40px;
+border-radius:20px;
+}
+
+h1{
+color:orange;
+}
+
+.images{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:30px;
+}
+
+.images img{
+width:200px;
+height:200px;
+border-radius:10px;
+object-fit:cover;
+cursor:pointer;
+transition:0.3s;
+}
+
+.images img:hover{
+transform:scale(1.05);
+}
+
+.centergif{
+width:120px;
+height:120px;
+cursor:default;
+}
+
+.details{
+margin-top:20px;
+font-size:18px;
+line-height:1.6;
+}
+
+.backbtn{
+display:inline-block;
+margin-top:30px;
+padding:12px 25px;
+background:orange;
+color:black;
+font-weight:bold;
+border-radius:10px;
+text-decoration:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Kurama (Nine Tails)</h1>
+
+<div class="container">
+
+<div class="images">
+
+<img src="kurama1.jpg" onclick="showBeast()">
+
+<img src="i.gif" class="centergif">
+
+<img src="nar.jpg" onclick="showJin()">
+
+</div>
+
+<div class="details" id="details">
+
+Click Kurama or Naruto image to see details.
+
+</div>
+
+<a href="tailedbeasts.html" class="backbtn">⬅ Back to Tailed Beasts</a>
+
+</div>
+
+<script>
+
+function showBeast(){
+
+document.getElementById("details").innerHTML = `
+<h2>Kurama</h2>
+<p>Kurama is the Nine-Tailed Beast.</p>
+<p>It looks like a giant orange fox with nine powerful tails.</p>
+<p>Kurama has enormous chakra and destructive power.</p>
+<p>Later Kurama became Naruto's trusted partner.</p>
+`;
+
+}
+
+function showJin(){
+
+document.getElementById("details").innerHTML = `
+<h2>Naruto Uzumaki</h2>
+<p>Naruto Uzumaki is the jinchūriki of the Nine-Tailed Beast Kurama.</p>
+<p>He was once feared by villagers because Kurama was sealed inside him.</p>
+<p>Naruto became one of the strongest ninjas in the world.</p>
+<p>He achieved his dream and became the Seventh Hokage.</p>
+`;
+
+}
+
+</script>
+
+</body>
+</html>

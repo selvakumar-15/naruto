@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Isobu - Three Tails</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+text-align:center;
+color:white;
+background-image:url("13.jpg");
+background-size:cover;
+background-position:center;
+}
+
+.container{
+width:80%;
+margin:auto;
+margin-top:70px;
+background:rgba(0,0,0,0.8);
+padding:40px;
+border-radius:20px;
+}
+
+h1{
+color:orange;
+}
+
+/* image layout */
+.images{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:30px;
+}
+
+/* image style */
+.images img{
+width:220px;
+height:220px;
+border-radius:10px;
+object-fit:cover;
+cursor:pointer;
+transition:0.3s;
+}
+
+.images img:hover{
+transform:scale(1.05);
+}
+
+/* details */
+.details{
+margin-top:20px;
+font-size:18px;
+line-height:1.6;
+}
+
+/* back button */
+.backbtn{
+display:inline-block;
+margin-top:30px;
+padding:12px 25px;
+background:orange;
+color:black;
+font-weight:bold;
+border-radius:10px;
+text-decoration:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Isobu (Three Tails)</h1>
+
+<div class="container">
+
+<div class="images">
+
+<img src="isobu1.jpg" onclick="showIsobu()">
+
+<img src="rin.jpg" onclick="showRin()">
+
+</div>
+
+<div class="details" id="details">
+
+Click Isobu or Rin image to see details.
+
+</div>
+
+<a href="tailedbeasts.html" class="backbtn">⬅ Back to Tailed Beasts</a>
+
+</div>
+
+<script>
+
+function showIsobu(){
+
+document.getElementById("details").innerHTML = `
+<h2>Isobu</h2>
+<p>Isobu is the Three-Tailed Beast.</p>
+<p>It looks like a giant turtle with a spiked shell.</p>
+<p>Isobu possesses powerful water-based abilities.</p>
+<p>It was once sealed inside Rin Nohara.</p>
+`;
+
+}
+
+function showRin(){
+
+document.getElementById("details").innerHTML = `
+<h2>Rin Nohara</h2>
+<p>Rin Nohara was a ninja from the Hidden Leaf Village.</p>
+<p>She was the jinchūriki of the Three-Tailed Beast Isobu.</p>
+<p>Rin was the teammate of Kakashi Hatake and Obito Uchiha.</p>
+<p>Her death had a major impact on Obito's life.</p>
+`;
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Team Guy</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background-image:url("4.jpg");
+background-size:cover;
+color:white;
+}
+
+h1{
+text-align:center;
+color:orange;
+}
+
+.container{
+display:flex;
+padding:20px;
+}
+
+.details{
+flex:1;
+background:rgba(0,0,0,0.8);
+border-radius:20px;
+padding:30px;
+min-height:420px;
+}
+
+.details img{
+width:220px;
+border-radius:10px;
+margin-top:10px;
+}
+
+.menu{
+width:220px;
+margin-left:30px;
+}
+
+.box{
+width:180px;
+height:90px;
+border:3px solid orange;
+margin-bottom:20px;
+display:flex;
+justify-content:center;
+align-items:center;
+cursor:pointer;
+font-weight:bold;
+border-radius:10px;
+background:rgba(0,0,0,0.6);
+transition:0.3s;
+}
+
+.box:hover{
+background:orange;
+color:black;
+transform:scale(1.05);
+}
+
+.backbtn{
+display:block;
+width:220px;
+margin:30px auto;
+padding:12px;
+background:orange;
+color:black;
+text-align:center;
+font-weight:bold;
+border-radius:10px;
+text-decoration:none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Team Guy</h1>
+
+<div class="container">
+
+<div class="details" id="details">
+
+<h2>Select a character</h2>
+<p>Click Might Guy, Rock Lee, Neji or Tenten.</p>
+
+</div>
+
+<div class="menu">
+
+<div class="box" onclick="showCharacter('guy')">Might Guy</div>
+<div class="box" onclick="showCharacter('lee')">Rock Lee</div>
+<div class="box" onclick="showCharacter('neji')">Neji</div>
+<div class="box" onclick="showCharacter('tenten')">Tenten</div>
+
+</div>
+
+</div>
+
+<a href="teams.html" class="backbtn">⬅ Back to Teams Page</a>
+
+<script>
+
+function showCharacter(name){
+
+var content="";
+
+if(name==="guy"){
+content=`
+
+<h2>Might Guy</h2>
+
+<img src="guy.jpg">
+
+<p><b>Might Guy is the leader of Team Guy.</b></p>
+
+<p>He specializes in Taijutsu and is known as the Blue Beast of the Leaf.</p>
+
+<p>Guy is the rival of Kakashi Hatake.</p>
+
+<p>He can open the Eight Inner Gates to gain incredible power.</p>
+
+`;
+}
+
+if(name==="lee"){
+content=`
+
+<h2>Rock Lee</h2>
+
+<img src="lee.jpg">
+
+<p><b>Rock Lee is a hardworking ninja who cannot use ninjutsu or genjutsu.</b></p>
+
+<p>He focuses only on Taijutsu.</p>
+
+<p>Lee trained under Might Guy and became extremely powerful.</p>
+
+<p>He can open the Inner Gates to increase his strength and speed.</p>
+
+`;
+}
+
+if(name==="neji"){
+content=`
+
+<h2>Neji Hyuga</h2>
+
+<img src="neji.jpg">
+
+<p><b>Neji belongs to the Hyuga Clan.</b></p>
+
+<p>He uses the Byakugan eye technique.</p>
+
+<p>Neji fights using the Gentle Fist style.</p>
+
+<p>He was considered a prodigy of the Hyuga clan.</p>
+
+`;
+}
+
+if(name==="tenten"){
+content=`
+
+<h2>Tenten</h2>
+
+<img src="tenten.jpg">
+
+<p><b>Tenten specializes in weapon techniques.</b></p>
+
+<p>She can summon many ninja weapons using scrolls.</p>
+
+<p>Tenten is skilled with kunai, shuriken and other ninja tools.</p>
+
+<p>She is a member of Team Guy alongside Lee and Neji.</p>
+
+`;
+}
+
+document.getElementById("details").innerHTML=content;
+
+}
+
+</script>
+
+</body>
+</html>

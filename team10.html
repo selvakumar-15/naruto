@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Team 10</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background-image:url("3.jpg");
+background-size:cover;
+color:white;
+}
+
+h1{
+text-align:center;
+color:orange;
+text-shadow:0 0 15px orange;
+}
+
+.container{
+display:flex;
+padding:20px;
+}
+
+.details{
+flex:1;
+background:rgba(0,0,0,0.8);
+border-radius:20px;
+padding:30px;
+min-height:400px;
+transition:0.5s;
+animation:fade 0.5s;
+}
+
+@keyframes fade{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+.details img{
+width:220px;
+border-radius:10px;
+margin-top:10px;
+box-shadow:0 0 10px black;
+}
+
+.menu{
+width:220px;
+margin-left:30px;
+}
+
+.box{
+width:180px;
+height:90px;
+border:3px solid orange;
+margin-bottom:20px;
+display:flex;
+justify-content:center;
+align-items:center;
+cursor:pointer;
+font-weight:bold;
+border-radius:10px;
+background:rgba(0,0,0,0.6);
+transition:0.3s;
+}
+
+.box:hover{
+background:orange;
+color:black;
+transform:scale(1.05);
+box-shadow:0 0 15px orange;
+}
+
+.box:active{
+box-shadow:0 0 25px orange;
+transform:scale(0.95);
+}
+
+.backbtn{
+display:block;
+width:220px;
+margin:30px auto;
+padding:12px;
+background:orange;
+color:black;
+text-align:center;
+font-weight:bold;
+border-radius:10px;
+text-decoration:none;
+transition:0.3s;
+}
+
+.backbtn:hover{
+background:red;
+color:white;
+transform:scale(1.05);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Team 10</h1>
+
+<div class="container">
+
+<div class="details" id="details">
+
+<h2>Select a character</h2>
+<p>Click Asuma, Shikamaru, Ino or Choji.</p>
+
+</div>
+
+<div class="menu">
+
+<div class="box" onclick="showCharacter('asuma')">Asuma</div>
+<div class="box" onclick="showCharacter('shikamaru')">Shikamaru</div>
+<div class="box" onclick="showCharacter('ino')">Ino</div>
+<div class="box" onclick="showCharacter('choji')">Choji</div>
+
+</div>
+
+</div>
+
+<a href="teams.html" class="backbtn">⬅ Back to Teams Page</a>
+
+<script>
+
+function showCharacter(name){
+
+var content="";
+
+if(name==="asuma"){
+content=`
+
+<h2>Asuma Sarutobi</h2>
+
+<img src="asuma.jpg">
+
+<p><b>Asuma Sarutobi is the leader of Team 10.</b></p>
+
+<p>He is the son of the Third Hokage.</p>
+
+<p>Asuma uses chakra blades and wind style techniques.</p>
+
+<p>He deeply cared for his students Shikamaru, Ino and Choji.</p>
+
+<p>He later died fighting the Akatsuki member Hidan.</p>
+
+`;
+}
+
+if(name==="shikamaru"){
+content=`
+
+<h2>Shikamaru Nara</h2>
+
+<img src="shikamaru.jpg">
+
+<p><b>Shikamaru is one of the smartest ninjas in the Leaf Village.</b></p>
+
+<p>His IQ is over 200 and he is a master strategist.</p>
+
+<p>He uses Shadow Possession Jutsu.</p>
+
+<p>Although he calls everything troublesome, he always protects his friends.</p>
+
+`;
+}
+
+if(name==="ino"){
+content=`
+
+<h2>Ino Yamanaka</h2>
+
+<img src="ino.jpg">
+
+<p><b>Ino belongs to the Yamanaka Clan.</b></p>
+
+<p>She uses Mind Transfer Jutsu to control enemies.</p>
+
+<p>Ino later becomes a skilled medical ninja.</p>
+
+<p>She also helps run the Yamanaka family flower shop.</p>
+
+`;
+}
+
+if(name==="choji"){
+content=`
+
+<h2>Choji Akimichi</h2>
+
+<img src="choji.jpg">
+
+<p><b>Choji belongs to the Akimichi Clan.</b></p>
+
+<p>The Akimichi clan uses body expansion techniques.</p>
+
+<p>Choji converts calories into chakra for massive strength.</p>
+
+<p>He is kind and extremely loyal to his best friend Shikamaru.</p>
+
+`;
+}
+
+document.getElementById("details").innerHTML=content;
+
+}
+
+</script>
+
+</body>
+</html>
